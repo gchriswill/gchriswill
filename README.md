@@ -1,16 +1,19 @@
-## Hi there 👋
-
-<!--
-**gchriswill/gchriswill** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
-
-Here are some ideas to get you started:
-
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+### [www](https://www.gchriswill.me)
+```
+                                                  .       .x┼=:.                         .          ..       .. 
+                        .uef^"                   @88>    z`    ^%    x=~                @88>  x .d88"  x .d88"  
+                      :d88E          .u    .     %8P        .   <k  88x.   .e.   .e.    %8P    5888R    5888R   
+     uL           .   `888E        .d88B :@8c     .       .@8Ned8" '8888╳.x888:.x888     .     '888R    '888R   
+ .ue888Nc..  .udR88N   888E .z8k  ="8888f8888r  .@88u   .@^%8888"   `8888  888╳ '888k  .@88u    888R     888R   
+d88E`"888E` <888'888k  888E~?888L   4888>'88"  ''888E` x88:  `)8b.   ╳888  888╳  888╳ ''888E`   888R     888R   
+888E  888E  9888 'Y"   888E  888E   4888> '      888E  8888N=*8888   ╳888  888╳  888╳   888E    888R     888R   
+888E  888E  9888       888E  888E   4888>        888E   %8"    R88   ╳888  888╳  888╳   888E    888R     888R   
+888E  888E  9888       888E  888E  .d888L .┼     888E    @8Wou 9%   .╳888  888╳. 888~   888E    888R     888R   
+888& .888E  ?8888u..╱  888E  888E  ^"8888*"      888&  .888888P`    `%88%``"*888Y"      888&   .888B .  .888B . 
+*888" 888&   "8888P'  m888N= 888>     "Y"        R888" `   ^"F        `~     `"         R888"  ^*888%   ^*888%  
+ `"   "888E    "P'     `Y"   888                  ""                                     ""      "%       "%    
+.dWi   `88E                 J88"                                                                                
+4888~  J8%                  @%                                                                                  
+ ^"===*"`                 :"                                                                                                                         
+```
+### [.me](https://www.gchriswill.me)
