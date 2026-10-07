@@ -26,11 +26,13 @@ d88E`"888E` <888'888k  888E~?888L   4888>'88"  ''888E` x88:  `)8b.   ╳888  888
 
 **Digitally known as:** *`gchriswill`*
 
-**Current Area of Focus:** *Swift Cross-Platform and AI Systems Infrastructure*
+**Current Areas of Focus:** 
+- *Swift Across All Platforms*
+- *AI Systems Infrastructure*
 
-A cross-functional and multidisciplinary engineer specializing in team leadership, team productivity and efficiency, resource orchestration, systems and software architecture, AI systems infrastructure, end-to-end agentic SDLC workflows, and mobile app ecosystems.
+A cross-functional and multi-disciplinary engineer specializing in team leadership, team productivity and efficiency, resource orchestration, systems and software architecture, AI systems infrastructure, end-to-end agentic SDLC workflows, and mobile app ecosystems.
 
-I’ve held roles as Engineer 3, Engineer 4, Senior Engineer, Principal Engineer, and Software Engineer with a Swift specialization. I’ve also collaborated cross-functionally on teams responsible for developing Cloud Infrastructure Training Modules at Apple; the My Verizon app (5G Home); the My Disney Experience app (PhotoPass AR Tech); Verizon’s Chat Cloud Services, Digital Assistant, and My Fios app (Home Router and Network).
+I’ve held roles as Engineer 3, Engineer 4, Senior Engineer, Principal Engineer, and Software Engineer with a Swift specialization. I’ve also collaborated cross-functionally with teams responsible for developing Cloud Infrastructure Training Modules at Apple; the My Verizon app (5G Home); the My Disney Experience app (PhotoPass AR Tech); Verizon’s Chat Cloud Services, Digital Assistant, and My Fios app (Home Router and Network).
 
 I’m passionate about developing innovative applications, solutions, and services on any platform and with any C-based programming language, although I prefer Swift. I also enjoy mentoring and guiding the next generation of engineers to improve team performance, productivity, and value; product quality; and system reliability.
 
@@ -42,7 +44,7 @@ My aspirations include becoming an engineering leader with a strong technical fo
 
 **Apple · Orlando, FL** — *August 2026 – October 2026*
 
-Contracted through Bayside Solutions and assigned to the Apple Services Engineering group. Contributed to the design, development, integration, and operational excellence of cloud-native services, primarily in Swift and deployed via containerized infrastructure.
+Contracted through Bayside Solutions and assigned to the Apple Services Engineering group. Contributed to the design, development, integration, and operational excellence of cloud-native services, primarily in Swift, within containerized infrastructure.
 
 - Worked across software architecture, distributed systems design, backend development, AI-assisted engineering workflows, and process optimization to improve delivery velocity while upholding quality, traceability, and reliability.
 - Led technical analysis, validation, and evaluation of training and delivery modules, identifying ambiguities, design discrepancies, implementation risks, and production-readiness issues before deployment.
@@ -59,9 +61,17 @@ Contracted through Bayside Solutions and assigned to the Apple Services Engineer
 
 As a Principal Engineer on the 5G Home Internet and Services team, focused on team leadership and orchestration, software development subject-matter expertise, complex programming tasks, technical innovation, and maintenance initiative management.
 
-- Guided and supported the development team on solutions, approaches, and techniques for complex tasks requiring a high level of expertise.
+- Cross-functionally collaborated with stakeholders, product managers, designers, QAs and developers across teams to ensure alignment on technical solutions and project goals.
+- Provided research, development exploration, and technical analysis reporting to help businesses make decisions and plan accordingly at every step of the team’s journey.
+- Led and supported our agile development team through software development alignment and delivery, post-production delivery validation, and end-to-end debugging.
+- Guided and supported the development team with solutions, approaches, and techniques for complex tasks requiring a high level of expertise.
+- Developed and integrated Agentic CI/CD pipelines to streamline development, testing, and deployment processes, and improve overall software delivery efficiency.
 - Modernized APIs and migrated from legacy unstructured concurrency approaches to structured concurrent modules managed by the core networking stack.
 - Contributed hands-on to the foundational in-house iOS core API networking stack, delivered as an independent module and distributed across the organization as a Swift package.
+- Developed AR experiences leveraging ARKit world-tracking and 3D coordinates translations capabilities, as well as SceneKit for rendering 3D content, to enhance user interaction and engagement within the application.
+- Developed spatial and photogrammetry-based features to enhance 3D scanning of user environment to identify and integrate real-world objects vs virtual objects.
+- Migrated from UIKit-based UI components to SwiftUI, leveraging declarative syntax and modern Swift concurrency features for improved performance and maintainability.
+- Migrated from Objective-C codebases to Swift, enhancing code maintainability, leveraging modern Swift features, and improving overall application performance.
 
 **Technologies and tools:** Java, Swift, SwiftUI, Combine, Swift Concurrency (async/await and continuations), AR, Spring, iOS development, machine learning, Python, Kibana (Elasticsearch), TensorFlow, PyTorch, computer vision, Vision, Core ML, Create ML, AWS, GCP, Xcode, xScope, Bash, Terminal, Git, GitLab, Confluence, JIRA, G Suite, Postman, Charles, Figma, and Jenkins.
 
@@ -71,8 +81,10 @@ As a Principal Engineer on the 5G Home Internet and Services team, focused on te
 
 As a Senior Software Engineer on the PhotoPass team within the My Disney Experience app, contributed to the technical direction and vision for PhotoPass in-app products and collaborated across multiple engineering teams.
 
-- Provided guidance, mentorship, and support for PhotoPass technologies, including on-device and cloud-based machine learning initiatives, augmented reality, spatial computing, and mobile payment services.
 - Co-led mobile app development teams and supported software development practices, mobile systems design, implementation, engineering best practices, and photogrammetry techniques.
+- Provided guidance, mentorship, and support for PhotoPass technologies, including on-device and cloud-based machine learning initiatives, augmented reality, spatial computing, and mobile payment services.
+- Collaborated as a key contributor on the development of Photopass Lenses, and on the integration of Snapchat CameraKit SDK in collaboration with the Snap engineering team, and within My Disney Experience app, ensuring seamless user experiences and high-quality augmented reality interactions.
+- Collaborated as a key contributor on the development of Mural of Memories, a Spatial AR experience leveraging the latest geolocation and mapping technologies to create immersive augmented reality 3D memories.
 
 **Technologies and tools:** Xcode, Swift, Objective-C, agile software development, machine learning, augmented reality, Apple Pay, UIKit, GCD, PassKit, Jira, GitLab, and Git.
 
@@ -139,7 +151,7 @@ Provided mobile application development services at Verizon as a consultant unde
 
 ## Education
 
-### Software Engineering — Graduate Certificate
+### Software Engineering — Graduate Certification
 
 **Boston University, Metropolitan College** — *May 2020 – May 2023*
 
@@ -173,15 +185,15 @@ Studied programming, design fundamentals, and tools for creating interactive con
 ## Developer Programs
 
 - Apple Developer Program — Individual and enterprise accounts
-- Google Developer Program — Android and mobile web
-- Microsoft Developer Partner — Enterprise accounts
+- Google Developer Program — Individual (within Android and mobile web)
+- Microsoft Developer Partner — Enterprise accounts (legacy)
 
 ## Skills
 
-- **Technologies:** AR, AI, media, LLMs, machine learning, networking, and vision
-- **Platforms:** iOS, Android, Windows, web, AWS, Azure, and GCP
-- **Programming languages:** Swift, Objective-C, Java, C#, JavaScript, Python, and Bash
-- **Design paradigms:** Protocol-oriented, object-oriented, functional, procedural, reactive, and imperative
+- **Technologies:** AR, AI, Agentic, LLMs, Machine Learning, Networking, and Vision
+- **Platforms:** iOS, Android, Windows, Web, AWS, Azure, and GCP
+- **Programming languages:** Swift, Objective-C, C#, C++, Java, JavaScript, Python, and Bash
+- **Design paradigms:** Protocol-Oriented, Object-Oriented, Functional, Procedural, Reactive, and Imperative
 - **Architectures:** MVC, MVP, MVVM, and MV
 
 **Tools:** Copilot, Xcode, Android Studio, Visual Studio, Xamarin, Unity 3D, Node.js, Vapor/Fluent, IntelliJ, WebStorm, PyCharm, Terminal, JIRA, Confluence, Claude Code/Skills, Postman, Kibana, LangGraph, LLVM, LLDB, React, Automator, iOS Inspector, Dialogflow, FileZilla, Git, GitLab, GitHub, Kubernetes, Docker, MongoDB, PostgreSQL, Splunk, Agentic Harness, ETE Agentic Workflows, Local Agentic Pipelines, ROCm and HIP SDK, and Lemonade-Server.
