@@ -1,0 +1,17 @@
+{
+    "terminal.integrated.copyOnSelection": true,
+    "terminal.integrated.cursorBlinking": true,
+    "terminal.integrated.cursorStyle": "line",
+    "terminal.integrated.tabs.defaultColor": "terminal.ansiGreen",
+    "terminal.integrated.smoothScrolling": true,
+    "terminal.integrated.shellIntegration.environmentReporting": true,
+    "terminal.integrated.gpuAcceleration": "on",
+    "terminal.integrated.enableVisualBell": true,
+    "terminal.integrated.enableImages": true,
+    "terminal.integrated.defaultProfile.linux": "bash",
+    "terminal.integrated.suggest.quickSuggestions": {
+        "commands": "on",
+        "arguments": "on",
+        "unknown": "on"
+    }
+}
