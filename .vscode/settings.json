@@ -13,5 +13,13 @@
         "commands": "on",
         "arguments": "on",
         "unknown": "on"
-    }
+    },
+    "chat.editing.explainChanges.enabled": true,
+    "chat.viewProgressBadge.enabled": true,
+    "chat.agentSessionProjection.enabled": true,
+    "chat.mcp.discovery.enabled": {
+        "copilot": true
+    },
+    "chat.mcp.gallery.enabled": true,
+    "chat.checkpoints.showFileChanges": true
 }
