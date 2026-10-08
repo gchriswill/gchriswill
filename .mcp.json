@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "microsoft/markitdown": {
+      "type": "stdio",
+      "command": "uvx",
+      "args": [
+        "markitdown-mcp@0.0.1a4"
+      ]
+    }
+  }
+}
