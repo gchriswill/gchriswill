@@ -30,5 +30,6 @@
     "git.inputValidationLength": 64,
     "github.gitProtocol": "ssh",
     "github.copilot.chat.agent.autoFix": true,
-    "github.copilot.completions.chat.enabled": true
+    "github.copilot.completions.chat.enabled": true,
+    "window.autoDetectColorScheme": true
 }
