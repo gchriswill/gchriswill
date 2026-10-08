@@ -21,5 +21,14 @@
         "copilot": true
     },
     "chat.mcp.gallery.enabled": true,
-    "chat.checkpoints.showFileChanges": true
+    "chat.checkpoints.showFileChanges": true,
+    "git.alwaysShowStagedChangesResourceGroup": true,
+    "git.alwaysSignOff": true,
+    "git.blame.editorDecoration.enabled": true,
+    "git.enableCommitSigning": true,
+    "git.inputValidation": true,
+    "git.inputValidationLength": 64,
+    "github.gitProtocol": "ssh",
+    "github.copilot.chat.agent.autoFix": true,
+    "github.copilot.completions.chat.enabled": true
 }
