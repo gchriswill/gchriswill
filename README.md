@@ -108,7 +108,7 @@ Member of the Emerging Technologies team, working as a Senior Engineer/Developer
 **Verizon · Irving, TX** — *October 2018 – December 2020*
 
 - Contributed to development and maintenance of backend-connected mobile systems for Verizon’s Digital Assistant features (live chat, chatbot, and voicebot) within the My Verizon iOS app’s core engineering team.
-- Led by contribution the development of internal developer tools, including portable one-to-one mock local servers in JavaScript and Swift. These tools enabled projects across organizations to validate delivery without dependent systems.
+- Led by contributing to the development of internal developer tools, including portable one-to-one mock local servers in JavaScript and Swift. These tools enabled projects across organizations to validate delivery without dependent systems.
 - Focused on modernizing approaches for maintainable, scalable systems using custom architectures that blended MVC and MVVM with object-oriented and protocol-oriented programming.
 
 **Technologies and tools:** Xcode, Swift, Objective-C, Node.js, Vapor (server-side Swift), Fluent, Bash, Terminal, Git, PostgreSQL, Bitbucket Server, Confluence, JIRA, G Suite, WebStorm, and Jenkins.
@@ -158,7 +158,7 @@ Provided mobile application development services at Verizon as a consultant unde
 
 ### Software Engineering — Graduate Certification
 
-**Boston University, Metropolitan College** — *May 2020 – May 2023*
+**Boston University, Metropolitan College · Boston, MA** — *May 2020 – May 2023*
 
 Dual-enrollment option alongside the MSSD degree program. The GCSWE program prepares software engineers to participate in and lead development projects, plan and implement complex software applications, and apply object-oriented and structured techniques, project management, and testing.
 
@@ -166,7 +166,7 @@ The program covers requirements analysis, object-oriented methods, design patter
 
 ### Software Development — Master of Science
 
-**Boston University, Metropolitan College** — *May 2020 – May 2023*
+**Boston University, Metropolitan College · Boston, MA** — *May 2020 – May 2023*
 
 The MSSD program prepares developers to understand evolving requirements across diverse fields and to deliver secure, reliable software as team members and leaders. Graduates develop skills in analyzing complex business and technical requirements; leading and contributing to development, engineering, and management teams; producing secure, robust software designs and high-quality code; and managing multi-location, multi-language software projects.
 
