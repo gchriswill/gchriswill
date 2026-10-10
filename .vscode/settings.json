@@ -31,5 +31,7 @@
     "github.gitProtocol": "ssh",
     "github.copilot.chat.agent.autoFix": true,
     "github.copilot.completions.chat.enabled": true,
-    "window.autoDetectColorScheme": true
+    "window.autoDetectColorScheme": true,
+    "chat.agent.sandbox.network.allowLocalNetwork": true,
+    "chat.agent.sandbox.enabled": "on"
 }
