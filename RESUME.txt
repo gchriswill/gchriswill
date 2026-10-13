@@ -5,15 +5,7 @@ Contact via GitHub Discussions: https://github.com/gchriswill/gchriswill/discuss
 Swift Across All Platforms and AI Systems Infrastructure
 
 <!-- resume:body:start -->
-
 Summary
-
-Digitally known as: gchriswill
-
-Current Areas of Focus:
-
--   Swift Across All Platforms
--   AI Systems Infrastructure
 
 A cross-functional and multi-disciplinary engineer specializing in team leadership, team productivity and efficiency, resource orchestration, systems and software architecture, AI systems infrastructure, end-to-end agentic SDLC workflows, and mobile app ecosystems.
 
@@ -211,5 +203,4 @@ Projects
 -   Pinner Android app (https://github.com/gchriswill/pinner)
 -   GitHub Timeline Android app (https://github.com/gchriswill/github-timeline)
 -   Sizesable Safari browser extension (https://github.com/gchriswill/Sizesable)
-
 <!-- resume:body:end -->
