@@ -1,0 +1,131 @@
+```text
+2012-12 → Started Journey into the Tech Industry
+
+2013-02 → Earned Apple Certified Associate - Mac Integration 10.8
+
+2013-09 → Started B.S. Mobile Development, Full Sail University
+
+2014-01 → Started America READS Program Member, Orange County Public Schools
+2014-01 → Started Staff Volunteer, Orange County Public Schools
+
+2014-03 → Started Teach-In Instructor, Orange County Public Schools
+2014-04 → Completed Teach-In Instructor, Orange County Public Schools
+
+2015-09 → Completed America READS Program Member, Orange County Public Schools
+2015-09 → Completed Staff Volunteer, Orange County Public Schools
+2015-09 → Earned Volunteer of the Year, Orange County Public Schools
+
+2015-10 → Started Toony Cam
+
+2016-01 → Started Give Us Strength
+2016-01 → Completed Give Us Strength
+
+2016-02 → Started Take Over
+2016-02 → Completed Take Over
+
+2016-09 → Started Mobile Application Developer, Parthenon Studios
+
+2016-11 → Completed B.S. Mobile Development, Full Sail University
+
+2017-06 → Started SunRail
+2017-06 → Completed Toony Cam
+
+2017-07 → Started Mobile Cross-Platform Developer, Teeps
+2017-07 → Started Orlando Health Mobile
+
+2018-01 → Completed SunRail
+2018-01 → Completed Orlando Health Mobile
+2018-01 → Completed Mobile Cross-Platform Developer, Teeps
+
+2018-02 → Started Mobile Game Developer, The Fastmind
+2018-02 → Started Letter Master
+
+2018-04 → Completed Mobile Game Developer, The Fastmind
+2018-04 → Completed Letter Master
+2018-04 → Completed Mobile Application Developer, Parthenon Studios
+2018-04 → Started Engineer 3, Software & Systems Engineering, Verizon
+2018-04 → Started Verizon My Fios
+
+2018-06 → Started Verizon Home Network Protection
+
+2018-08 → Completed Verizon Home Network Protection
+
+2018-09 → Earned Apple Certified Associate - Mac Integration 10.13
+
+2018-10 → Promoted to Engineer 4, Software & Systems Engineering, Verizon
+
+2019-05 → Started My Verizon
+
+2019-12 → Earned Verizon Scrum Master
+2019-12 → Completed Verizon My Fios
+
+2020-01 → Earned Creational Design Patterns in Swift 5
+
+2020-05 → Started M.S. Software Development, Boston University
+2020-05 → Started Graduate Certificate in Software Engineering, Boston University
+2020-05 → Earned AWS Certified Cloud Practitioner
+2020-05 → Earned Structural Design Patterns in Swift 5
+
+2020-06 → Started Verizon 5G Antenna AR Compass
+
+2020-12 → Promoted to Senior Engineer, Software & Systems Engineering, Verizon
+2020-12 → Started Verizon Digital Assistant (Chatbot Services)
+2020-12 → Completed Verizon 5G Antenna AR Compass
+2020-12 → Completed My Verizon
+
+2021-11 → Completed Verizon Digital Assistant (Chatbot Services)
+2021-11 → Started Senior Software Engineer, Disney
+
+2022-01 → Started Disney Mural Of Memories
+2022-01 → Started Disney PhotoPass Lenses
+
+2022-04 → Completed Disney Mural Of Memories
+
+2023-05 → Completed M.S. Software Development, Boston University
+2023-05 → Completed Graduate Certificate in Software Engineering, Boston University
+2023-05 → AWS Certified Cloud Practitioner Expired
+
+2023-07 → Completed Senior Software Engineer, Disney
+2023-07 → Completed Disney PhotoPass Lenses
+2023-07 → Started Principal Engineer, Verizon
+2023-07 → Started Verizon 5G Home (Self Setup) iOS API Network Stack
+2023-07 → Started Verizon 5G Home Internet (Self Setup)
+
+2023-08 → Started Verizon Whole Home WiFi: WiFi Health Check
+
+2023-09 → Completed Verizon 5G Home (Self Setup) iOS API Network Stack
+
+2023-12 → Completed Verizon Whole Home WiFi: WiFi Health Check
+
+2024-01 → Started Verizon 5G Gateway Optimizer
+
+2024-06 → Completed Verizon 5G Gateway Optimizer
+
+2024-07 → Started Verizon Wi‑Fi Backup
+
+2024-09 → Started Or Swift
+
+2025-06 → Completed Verizon Wi‑Fi Backup
+
+2025-12 → Completed Principal Engineer, Verizon
+2025-12 → Completed Verizon 5G Home Internet (Self Setup)
+
+2026-01 → Earned Swift 5 Essential Training
+
+2026-05 → Earned Master Swift
+2026-05 → Earned Swift 5: Protocol-Oriented Programming
+
+2026-06 → Started Lemonade Server: ROCm Support for RDNA2 Models
+2026-06 → Completed Lemonade Server: ROCm Support for RDNA2 Models
+2026-06 → Earned Agile Software Development
+2026-06 → Earned Complete Guide to SwiftUI
+2026-06 → Earned Swift 6 Essential Training
+
+2026-08 → Completed Or Swift
+2026-08 → Started Software Engineer, Apple Services Engineering
+
+2026-10 → Completed Software Engineer, Apple Services Engineering
+2026-10 → Started GitHub Foundations course, Microsoft Learn
+2026-10 → Completed GitHub Foundations course, Microsoft Learn
+2026-10 → Earned GitHub Foundations Certification, Microsoft Learn
+```
