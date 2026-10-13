@@ -6,6 +6,8 @@ on:
       - main
     paths:
       - README.md
+      - scripts/sync_resume.py
+      - .github/workflows/sync-resume.yml
   workflow_dispatch:
 
 permissions:

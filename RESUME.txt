@@ -5,6 +5,7 @@ Contact via GitHub Discussions: https://github.com/gchriswill/gchriswill/discuss
 Swift Across All Platforms and AI Systems Infrastructure
 
 <!-- resume:body:start -->
+<!-- resume:source:sha256 baf5ac13cb2a423340ce3be5058ba4401d8cc1844025809702984f94668a7b03 -->
 Summary
 
 A cross-functional and multi-disciplinary engineer specializing in team leadership, team productivity and efficiency, resource orchestration, systems and software architecture, AI systems infrastructure, end-to-end agentic SDLC workflows, and mobile app ecosystems.

@@ -1,3 +1,6 @@
+"""Export resume content, tracking all README bytes including whitespace."""
+
+import hashlib
 import json
 import subprocess
 import textwrap
@@ -54,7 +57,7 @@ def preserve_links(node):
     return {key: preserve_links(value) for key, value in node.items()}
 
 
-def render_pdf(text, destination):
+def render_pdf(text, destination, source_digest):
     font_path = "/usr/share/fonts/truetype/dejavu/DejaVuSansMono.ttf"
     pdfmetrics.registerFont(TTFont("ResumeMono", font_path))
 
@@ -72,6 +75,7 @@ def render_pdf(text, destination):
         pageCompression=1,
     )
     pdf.setTitle("Resume")
+    pdf.setSubject(f"README SHA-256: {source_digest}")
     pdf.setFont("ResumeMono", font_size)
     y = height - margin
 
@@ -98,7 +102,9 @@ def render_pdf(text, destination):
 
 
 def main():
-    readme_lines = (ROOT / "README.md").read_bytes().splitlines(keepends=True)
+    readme_bytes = (ROOT / "README.md").read_bytes()
+    source_digest = hashlib.sha256(readme_bytes).hexdigest()
+    readme_lines = readme_bytes.splitlines(keepends=True)
     first, last = marked_section(
         readme_lines,
         b"<!-- resume:start -->",
@@ -146,7 +152,12 @@ def main():
 
     prefix = b"".join(resume_lines[:first + 1])
     suffix = b"".join(resume_lines[last:])
-    updated = prefix + body_bytes + suffix
+    # Pandoc normalizes whitespace; track the exact source independently.
+    source_marker = (
+        f"<!-- resume:source:sha256 {source_digest} -->".encode("ascii")
+        + newline
+    )
+    updated = prefix + source_marker + body_bytes + suffix
 
     # Export the updated text without displaying the control markers.
     printable = (
@@ -156,7 +167,7 @@ def main():
     )
     temporary_pdf = ROOT / "RESUME.pdf.tmp"
     try:
-        render_pdf(printable.decode("utf-8"), temporary_pdf)
+        render_pdf(printable.decode("utf-8"), temporary_pdf, source_digest)
         resume_path.write_bytes(updated)
         temporary_pdf.replace(ROOT / "RESUME.pdf")
     finally:
