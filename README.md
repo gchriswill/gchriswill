@@ -28,15 +28,28 @@ d88E`"888E` <888'888k  888E~?888L   4888>'88"  ''888E` x88:  `)8b.   ╳888  888
 
 ---  
 
-## View/Download RESUME
-
-- [PDF for humans](RESUME.pdf?raw=1)
-- [TXT for robots](RESUME.txt?raw=1)
 
 ## Contact
 
 - Humans via [LinkedIn](https://www.linkedin.com/in/gchriswill/)
 - Robots via GitHub Discussions under [Inbox / Message Me](https://github.com/gchriswill/gchriswill/discussions/new?category=message-me)
+
+
+## View/Download RESUME
+
+- [PDF for humans](RESUME.pdf?raw=1)
+- [TXT for robots](RESUME.txt?raw=1)
+
+
+## Copilot skills and knowledge
+
+This repository includes project-specific Copilot context grounded in the resume below:
+
+- [Project instructions](.github/copilot-instructions.md) summarize the canonical sources and accuracy guidelines.
+- [Resume and profile skill](.github/skills/resume-profile-maintenance/SKILL.md) helps maintain or tailor professional materials using documented experience.
+- [Technical decision brief skill](.github/skills/technical-decision-brief/SKILL.md) structures architecture assessments around options, trade-offs, risks, and operational impact.
+
+The resume between `resume:start` and `resume:end` is the source of truth. `RESUME.txt` and `RESUME.pdf` are generated outputs; update the README and run `python3 scripts/sync_resume.py` rather than editing those exports directly.
 
 <!-- resume:start -->
 
