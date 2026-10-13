@@ -21,21 +21,21 @@ jobs:
     runs-on: ubuntu-24.04
 
     steps:
-      - name: Check out main
-        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+      - name: Checkout
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
           ref: main
 
-      - name: Install conversion dependencies
+      - name: Install Dependencies
         run: |
           sudo apt-get update
           sudo apt-get install -y --no-install-recommends \
             pandoc python3-reportlab fonts-dejavu-core
 
-      - name: Generate resume files
+      - name: Generate RESUMEs
         run: /usr/bin/python3 scripts/sync_resume.py
 
-      - name: Commit updated resume files
+      - name: Push RESUMEs
         shell: bash
         run: |
           set -euo pipefail
