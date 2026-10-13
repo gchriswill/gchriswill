@@ -2,8 +2,10 @@ Christopher Gonzalez Melendez
 Contact via LinkedIn: https://www.linkedin.com/in/gchriswill/
 Contact via GitHub Discussions: https://github.com/gchriswill/gchriswill/discussions/new?category=message-me
 
+Swift Across All Platforms and AI Systems Infrastructure
 
 <!-- resume:body:start -->
+
 Summary
 
 Digitally known as: gchriswill
@@ -209,4 +211,5 @@ Projects
 -   Pinner Android app (https://github.com/gchriswill/pinner)
 -   GitHub Timeline Android app (https://github.com/gchriswill/github-timeline)
 -   Sizesable Safari browser extension (https://github.com/gchriswill/Sizesable)
+
 <!-- resume:body:end -->

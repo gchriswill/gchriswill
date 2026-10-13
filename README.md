@@ -1,6 +1,6 @@
 ### [www](https://www.gchriswill.me)
 
-```
+```text
                                                   .       .x┼=:.                         .          ..       .. 
                         .uef^"                   @88>    z`    ^%    x=~                @88>  x .d88"  x .d88"  
                       :d88E          .u    .     %8P        .   <k  88x.   .e.   .e.    %8P    5888R    5888R   
@@ -20,6 +20,12 @@ d88E`"888E` <888'888k  888E~?888L   4888>'88"  ''888E` x88:  `)8b.   ╳888  888
 
 ### [.me](https://www.gchriswill.me)
 
+**D.K.A.** *(Digitally known as)***:** *`gchriswill`*
+
+**Current Areas of Focus:** 
+- *Swift Across All Platforms*
+- *AI Systems Infrastructure*
+
 ---  
 
 ## View/Download RESUME
@@ -35,12 +41,6 @@ d88E`"888E` <888'888k  888E~?888L   4888>'88"  ''888E` x88:  `)8b.   ╳888  888
 <!-- resume:start -->
 
 ## Summary
-
-**Digitally known as:** *`gchriswill`*
-
-**Current Areas of Focus:** 
-- *Swift Across All Platforms*
-- *AI Systems Infrastructure*
 
 A cross-functional and multi-disciplinary engineer specializing in team leadership, team productivity and efficiency, resource orchestration, systems and software architecture, AI systems infrastructure, end-to-end agentic SDLC workflows, and mobile app ecosystems.
 
