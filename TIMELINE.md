@@ -1,5 +1,6 @@
 ```text
 2012-12 → Started Journey into the Tech Industry
+
 2013-02 → Earned Apple Certified Associate - Mac Integration 10.8
 
 2013-09 → Started B.S. Mobile Development, Full Sail University
