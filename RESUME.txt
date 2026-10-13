@@ -6,6 +6,8 @@ Swift Across All Platforms and AI Systems Infrastructure
 
 <!-- resume:body:start -->
 <!-- resume:source:sha256 0092d491b2cf5dc91dfde2be4bfc47c61e89a58e4fb45b368cb7d01d86bb34fe -->
+
+
 Summary
 
 A cross-functional and multi-disciplinary engineer specializing in team leadership, team productivity and efficiency, resource orchestration, systems and software architecture, AI systems infrastructure, end-to-end agentic SDLC workflows, and mobile app ecosystems.
@@ -15,6 +17,7 @@ I’ve held roles as Engineer 3, Engineer 4, Senior Engineer, Principal Engineer
 I’m passionate about developing innovative applications, solutions, and services on any platform and with any C-based programming language, although I prefer Swift. I also enjoy mentoring and guiding the next generation of engineers to improve team performance, productivity, and value; product quality; and system reliability.
 
 My aspirations include becoming an engineering leader with a strong technical focus, hands-on skills and expertise, and enterprise business experience.
+
 
 Experience
 
@@ -127,6 +130,7 @@ Parthenon Studios · Orlando, FL — September 2016 – April 2018
 -   Developed iOS and Android prototypes and backend systems serving APIs with defined payload contracts, progressing concepts into production-ready products.
 -   Designed, developed, tested, and published applications across mobile platforms, with a focus on intuitive user experiences.
 
+
 Education
 
 Software Engineering — Graduate Certification
@@ -149,6 +153,7 @@ Full Sail University · Winter Park, FL — September 2013 – November 2016
 
 Studied programming, design fundamentals, and tools for creating interactive content for mobile platforms. The curriculum covered the full cycle of professional mobile application production, including pre-production, marketing, design, development, testing, and deployment, with an emphasis on user experience, project management, and device-specific design principles.
 
+
 Certifications
 
 -   AMD AI ROCm Certified Associate — AMD
@@ -160,11 +165,13 @@ Certifications
 -   Creational Design Patterns in Swift 5 — Pluralsight
 -   Protocol-Oriented Programming in Swift 5 — LinkedIn Learning
 
+
 Developer Programs
 
 -   Apple Developer Program — Individual and enterprise accounts
 -   Google Developer Program — Individual (within Android and mobile web)
 -   Microsoft Developer Partner — Enterprise accounts (legacy)
+
 
 Skills
 
@@ -175,6 +182,7 @@ Skills
 -   Architectures: MVC, MVP, MVVM, and MV
 
 Tools: Copilot, Xcode, Android Studio, Visual Studio, Xamarin, Unity 3D, Node.js, Vapor/Fluent, IntelliJ, WebStorm, PyCharm, Terminal, JIRA, Confluence, Claude Code/Skills, Postman, Kibana, LangGraph, LLVM, LLDB, React, Automator, iOS Inspector, Dialogflow, FileZilla, Git, GitLab, GitHub, Kubernetes, Docker, MongoDB, PostgreSQL, Splunk, Agentic Harness, ETE Agentic Workflows, Local Agentic Pipelines, ROCm and HIP SDK, and Lemonade-Server.
+
 
 Projects
 

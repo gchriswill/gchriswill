@@ -1,7 +1,8 @@
-"""Export resume content, tracking all README bytes including whitespace."""
+"""Export resumes, preserving heading spacing and tracking exact README bytes."""
 
 import hashlib
 import json
+import re
 import subprocess
 import textwrap
 from pathlib import Path
@@ -55,6 +56,80 @@ def preserve_links(node):
         }
 
     return {key: preserve_links(value) for key, value in node.items()}
+
+
+def mark_heading_spacing(markdown, document):
+    lines = markdown.splitlines()
+    headings = []
+    fence = None
+    for index, line in enumerate(lines):
+        fenced = re.match(r"^ {0,3}(`{3,}|~{3,})(.*)$", line)
+        if fence is not None:
+            if (
+                fenced
+                and fenced[1][0] == fence[0]
+                and len(fenced[1]) >= len(fence)
+                and not fenced[2].strip()
+            ):
+                fence = None
+            continue
+        if fenced:
+            fence = fenced[1]
+            continue
+        heading = re.match(r"^ {0,3}(#{1,6})(?:[ \t]+|$)", line)
+        if heading:
+            before = index
+            while before > 0 and not lines[before - 1].strip():
+                before -= 1
+            after = index + 1
+            while after < len(lines) and not lines[after].strip():
+                after += 1
+            headings.append((
+                len(heading[1]),
+                index - before + (before > 0),
+                after - index - (after == len(lines)),
+            ))
+
+    headers = [block for block in document["blocks"] if block["t"] == "Header"]
+    if [header["c"][0] for header in headers] != [
+        level for level, _, _ in headings
+    ]:
+        raise ValueError("Resume headings must be top-level ATX (#) headings.")
+
+    # Carry source spacing through Pandoc without changing heading text.
+    token_prefix = "RESUMEHEADING" + hashlib.sha256(
+        markdown.encode("utf-8")
+    ).hexdigest()
+    if token_prefix in markdown:
+        raise ValueError("Resume content conflicts with heading spacing markers.")
+    spacing = []
+    for index, (header, (_, before, after)) in enumerate(zip(headers, headings)):
+        start = f"{token_prefix}{index}START"
+        end = f"{token_prefix}{index}END"
+        header["c"][2] = (
+            [{"t": "Str", "c": start}]
+            + header["c"][2]
+            + [{"t": "Str", "c": end}]
+        )
+        spacing.append((start, end, before, after))
+    return spacing
+
+
+def restore_heading_spacing(text, spacing):
+    for start, end, before, after in spacing:
+        if text.count(start) != 1 or text.count(end) != 1:
+            raise ValueError("Pandoc did not preserve heading spacing markers.")
+        text = re.sub(
+            r"[ \t]*(?:\n[ \t]*)*" + re.escape(start),
+            "\n" * before,
+            text,
+        )
+        text = re.sub(
+            re.escape(end) + r"(?:[ \t]*\n)*",
+            "\n" * after,
+            text,
+        )
+    return text
 
 
 def render_pdf(text, destination, source_digest):
@@ -123,6 +198,7 @@ def main():
         check=True,
     )
     document = preserve_links(json.loads(parsed.stdout))
+    spacing = mark_heading_spacing(markdown, document)
     converted = subprocess.run(
         ["pandoc", "--from=json", "--to=plain", "--wrap=none"],
         input=json.dumps(document),
@@ -134,6 +210,7 @@ def main():
     body = converted.stdout.strip()
     if not body:
         raise ValueError("The converted resume body is empty.")
+    body = restore_heading_spacing(body, spacing)
 
     resume_path = ROOT / "RESUME.txt"
     resume_lines = resume_path.read_bytes().splitlines(keepends=True)
