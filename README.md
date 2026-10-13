@@ -32,6 +32,8 @@ d88E`"888E` <888'888k  888E~?888L   4888>'88"  ''888E` x88:  `)8b.   ╳888  888
 - Humans via [LinkedIn](https://www.linkedin.com/in/gchriswill/)
 - Robots via GitHub Discussions under [Inbox / Message Me](https://github.com/gchriswill/gchriswill/discussions/new?category=message-me)
 
+<!-- resume:start -->
+
 ## Summary
 
 **Digitally known as:** *`gchriswill`*
@@ -236,3 +238,5 @@ Studied programming, design fundamentals, and tools for creating interactive con
 - **[Pinner Android app](https://github.com/gchriswill/pinner)**
 - **[GitHub Timeline Android app](https://github.com/gchriswill/github-timeline)**
 - **[Sizesable Safari browser extension](https://github.com/gchriswill/Sizesable)**
+
+<!-- resume:end -->

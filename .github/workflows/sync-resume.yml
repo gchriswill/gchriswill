@@ -1,0 +1,54 @@
+name: Sync resume
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - README.md
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: sync-resume-main
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-24.04
+
+    steps:
+      - name: Check out main
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          ref: main
+
+      - name: Install conversion dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends \
+            pandoc python3-reportlab fonts-dejavu-core
+
+      - name: Generate resume files
+        run: /usr/bin/python3 scripts/sync_resume.py
+
+      - name: Commit updated resume files
+        shell: bash
+        run: |
+          set -euo pipefail
+          git add -- RESUME.txt RESUME.pdf
+
+          if git diff --cached --quiet; then
+            echo "Resume files are already up to date."
+            exit 0
+          fi
+
+          git config user.name "github-actions[bot]"
+          git config user.email \
+            "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git commit -m "chore: regenerate resume from README"
+          git push origin HEAD:main
