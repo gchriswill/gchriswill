@@ -40,6 +40,7 @@ d88E`"888E` <888'888k  888E~?888L   4888>'88"  ''888E` x88:  `)8b.   ╳888  888
 
 <!-- resume:start -->
 
+
 ## Summary
 
 A cross-functional and multi-disciplinary engineer specializing in team leadership, team productivity and efficiency, resource orchestration, systems and software architecture, AI systems infrastructure, end-to-end agentic SDLC workflows, and mobile app ecosystems.
@@ -49,6 +50,7 @@ I’ve held roles as Engineer 3, Engineer 4, Senior Engineer, Principal Engineer
 I’m passionate about developing innovative applications, solutions, and services on any platform and with any C-based programming language, although I prefer Swift. I also enjoy mentoring and guiding the next generation of engineers to improve team performance, productivity, and value; product quality; and system reliability.
 
 My aspirations include becoming an engineering leader with a strong technical focus, hands-on skills and expertise, and enterprise business experience.
+
 
 ## Experience
 
@@ -161,6 +163,7 @@ Provided mobile application development services at Verizon as a consultant unde
 - Developed iOS and Android prototypes and backend systems serving APIs with defined payload contracts, progressing concepts into production-ready products.
 - Designed, developed, tested, and published applications across mobile platforms, with a focus on intuitive user experiences.
 
+
 ## Education
 
 ### Software Engineering — Graduate Certification
@@ -183,6 +186,7 @@ The MSSD program prepares developers to understand evolving requirements across 
 
 Studied programming, design fundamentals, and tools for creating interactive content for mobile platforms. The curriculum covered the full cycle of professional mobile application production, including pre-production, marketing, design, development, testing, and deployment, with an emphasis on user experience, project management, and device-specific design principles.
 
+
 ## Certifications
 
 - AMD AI ROCm Certified Associate — AMD
@@ -194,11 +198,13 @@ Studied programming, design fundamentals, and tools for creating interactive con
 - Creational Design Patterns in Swift 5 — Pluralsight
 - Protocol-Oriented Programming in Swift 5 — LinkedIn Learning
 
+
 ## Developer Programs
 
 - Apple Developer Program — Individual and enterprise accounts
 - Google Developer Program — Individual (within Android and mobile web)
 - Microsoft Developer Partner — Enterprise accounts (legacy)
+
 
 ## Skills
 
@@ -209,6 +215,7 @@ Studied programming, design fundamentals, and tools for creating interactive con
 - **Architectures:** MVC, MVP, MVVM, and MV
 
 **Tools:** Copilot, Xcode, Android Studio, Visual Studio, Xamarin, Unity 3D, Node.js, Vapor/Fluent, IntelliJ, WebStorm, PyCharm, Terminal, JIRA, Confluence, Claude Code/Skills, Postman, Kibana, LangGraph, LLVM, LLDB, React, Automator, iOS Inspector, Dialogflow, FileZilla, Git, GitLab, GitHub, Kubernetes, Docker, MongoDB, PostgreSQL, Splunk, Agentic Harness, ETE Agentic Workflows, Local Agentic Pipelines, ROCm and HIP SDK, and Lemonade-Server.
+
 
 ## Projects
 
