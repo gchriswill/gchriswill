@@ -34,5 +34,9 @@
     "window.autoDetectColorScheme": true,
     "chat.agent.sandbox.network.allowLocalNetwork": true,
     "chat.agent.sandbox.enabled": "off",
-    "chat.tools.terminal.outputLocation": "terminal"
+    "chat.tools.terminal.outputLocation": "terminal",
+    "chat.defaultConfiguration": {
+        "mode": "autopilot",
+        "approvals": "assisted"
+    }
 }

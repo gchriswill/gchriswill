@@ -1,4 +1,4 @@
-name: Sync resume
+name: Sync RESUME
 
 on:
   push:
