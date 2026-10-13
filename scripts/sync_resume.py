@@ -211,6 +211,7 @@ def main():
     if not body:
         raise ValueError("The converted resume body is empty.")
     body = restore_heading_spacing(body, spacing)
+    body = re.sub(r"(?m)^([ \t]*-)[ \t]{2,}", r"\1 ", body)
 
     resume_path = ROOT / "RESUME.txt"
     resume_lines = resume_path.read_bytes().splitlines(keepends=True)
