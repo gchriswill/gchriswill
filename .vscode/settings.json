@@ -38,5 +38,8 @@
     "chat.defaultConfiguration": {
         "mode": "autopilot",
         "approvals": "assisted"
-    }
+    },
+    "python.analysis.typeCheckingMode": "standard",
+    "githubIssues.showIssueNumberInTree": true,
+    "githubPullRequests.experimental.useQuickChat": true
 }
