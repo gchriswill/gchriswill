@@ -7,6 +7,12 @@ on:
     paths:
       - README.md
       - scripts/sync_resume.py
+      - scripts/swift-resume/**
+      - scripts/qualify_swift_resume.py
+      - scripts/inspect_resume_pdf.py
+      - scripts/test_inspect_resume_pdf.py
+      - scripts/test_resume_workflows.py
+      - .github/workflows/qualify-swift-resume.yml
       - .github/workflows/sync-resume.yml
   workflow_dispatch:
 
@@ -18,24 +24,42 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
+  qualify:
+    if: github.ref == 'refs/heads/main'
+    permissions:
+      contents: read
+    uses: ./.github/workflows/qualify-swift-resume.yml
+
   sync:
+    needs: qualify
     if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-24.04
+    timeout-minutes: 10
 
     steps:
       - name: Checkout
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
-          ref: main
+          ref: ${{ github.sha }}
 
-      - name: Install Dependencies
+      - name: Download qualified Swift exports
+        uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093 # v4.3.0
+        with:
+          name: qualified-resume-${{ github.run_id }}
+          path: .qualification/qualified-export
+
+      - name: Verify and publish qualified exports
+        shell: bash
         run: |
-          sudo apt-get update
-          sudo apt-get install -y --no-install-recommends \
-            pandoc python3-reportlab fonts-dejavu-core
-
-      - name: Generate RESUMEs
-        run: /usr/bin/python3 scripts/sync_resume.py
+          set -euo pipefail
+          test "$(cat .qualification/qualified-export/commit.txt)" = "$(git rev-parse HEAD)"
+          sha256sum --check .qualification/qualified-export/source.sha256
+          (
+            cd .qualification/qualified-export
+            sha256sum --check exports.sha256
+          )
+          cp .qualification/qualified-export/RESUME.txt RESUME.txt
+          cp .qualification/qualified-export/RESUME.pdf RESUME.pdf
 
       - name: Push RESUMEs
         shell: bash

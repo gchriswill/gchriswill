@@ -1,0 +1,156 @@
+name: Qualify Swift RESUME
+
+on:
+  push:
+    paths:
+      - README.md
+      - RESUME.txt
+      - scripts/swift-resume/**
+      - scripts/sync_resume.py
+      - scripts/qualify_swift_resume.py
+      - scripts/inspect_resume_pdf.py
+      - scripts/test_inspect_resume_pdf.py
+      - scripts/test_resume_workflows.py
+      - .github/workflows/qualify-swift-resume.yml
+  pull_request:
+    paths:
+      - README.md
+      - RESUME.txt
+      - scripts/swift-resume/**
+      - scripts/sync_resume.py
+      - scripts/qualify_swift_resume.py
+      - scripts/inspect_resume_pdf.py
+      - scripts/test_inspect_resume_pdf.py
+      - scripts/test_resume_workflows.py
+      - .github/workflows/qualify-swift-resume.yml
+  workflow_dispatch:
+  workflow_call:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: qualify-swift-resume-${{ github.workflow }}-${{ github.ref }}-${{ github.event_name }}
+  cancel-in-progress: true
+
+jobs:
+  qualify:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    env:
+      PYTHONDONTWRITEBYTECODE: "1"
+    defaults:
+      run:
+        shell: bash
+    steps:
+      - name: Checkout
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+
+      - name: Install build and inspection dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends \
+            pkg-config libcairo2-dev libfreetype-dev pandoc fonts-dejavu-core \
+            python3-reportlab python3-pil poppler-utils
+
+      - name: Install pinned Swift
+        uses: swift-actions/setup-swift@d8e84bc3a450686a95474d7d6fa4a3301498debc # v3
+        with:
+          swift-version: "6.3.2"
+
+      - name: Record environment
+        run: |
+          mkdir -p .qualification
+          {
+            git rev-parse HEAD
+            uname -a
+            swift --version
+            /usr/bin/python3 --version
+            pandoc --version
+            pkg-config --modversion cairo freetype2
+            dpkg-query -W pandoc libcairo2 libfreetype6 fonts-dejavu-core \
+              python3-reportlab python3-pil poppler-utils
+            sha256sum /usr/share/fonts/truetype/dejavu/DejaVuSansMono.ttf
+          } > .qualification/ci-environment.txt
+          echo 'c805f9436dbc268644c1d9584f01a601a653e028e08fd74b9b949f6cf8304d88  /usr/share/fonts/truetype/dejavu/DejaVuSansMono.ttf' \
+            | sha256sum --check
+
+      - name: Test with Python wrapping oracle
+        run: |
+          /usr/bin/python3 scripts/qualify_swift_resume.py --oracle-only
+          /usr/bin/python3 -m unittest discover -s scripts -p 'test_*resume*.py' -v
+          RESUME_WRAP_ORACLE="$PWD/.qualification/outputs/wrapping.json" \
+            swift test --package-path scripts/swift-resume \
+              --scratch-path .qualification/ci-tests \
+              --cache-path .qualification/ci-cache --force-resolved-versions
+
+      - name: Qualify first clean release build
+        run: |
+          swift build -c release --package-path scripts/swift-resume \
+            --scratch-path .qualification/ci-build-first \
+            --cache-path .qualification/ci-cache --force-resolved-versions
+          /usr/bin/python3 scripts/qualify_swift_resume.py \
+            --binary .qualification/ci-build-first/release/sync-resume --require-parity
+          find .qualification/outputs -path '*/swift/RESUME.*' -type f -print0 \
+            | sort -z | xargs -0 sha256sum > .qualification/ci-first.sha256
+          cp .qualification/outputs/report.json .qualification/ci-first-report.json
+
+      - name: Qualify independent clean release build
+        run: |
+          swift build -c release --package-path scripts/swift-resume \
+            --scratch-path .qualification/ci-build-second \
+            --cache-path .qualification/ci-cache --force-resolved-versions
+          /usr/bin/python3 scripts/qualify_swift_resume.py \
+            --binary .qualification/ci-build-second/release/sync-resume --require-parity
+          sha256sum --check .qualification/ci-first.sha256
+          git diff --exit-code -- README.md RESUME.txt RESUME.pdf \
+            scripts/sync_resume.py .github/workflows/sync-resume.yml
+          {
+            echo '## Clean Ubuntu Swift qualification passed'
+            echo "Commit: $(git rev-parse HEAD)"
+            echo 'Swift tests, Python regression tests, both release builds, all fixture acceptance gates,'
+            echo 'operational failure scenarios, and cross-build export hashes passed.'
+            echo 'Production inputs, exports, and workflow remain unchanged.'
+            echo 'Qualified exports may now be consumed by the gated main publication job.'
+          } >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Prepare qualified exports for this commit
+        run: |
+          mkdir -p .qualification/qualified-export
+          cp .qualification/outputs/actual/swift/RESUME.txt \
+            .qualification/outputs/actual/swift/RESUME.pdf \
+            .qualification/qualified-export/
+          git rev-parse HEAD > .qualification/qualified-export/commit.txt
+          sha256sum README.md > .qualification/qualified-export/source.sha256
+          (
+            cd .qualification/qualified-export
+            sha256sum RESUME.txt RESUME.pdf > exports.sha256
+          )
+
+      - name: Save qualified exports
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
+        with:
+          name: qualified-resume-${{ github.run_id }}
+          overwrite: true
+          include-hidden-files: true
+          retention-days: 14
+          if-no-files-found: error
+          path: .qualification/qualified-export/
+
+      - name: Save qualification evidence
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
+        with:
+          name: swift-resume-qualification-${{ github.run_id }}-${{ github.run_attempt }}
+          include-hidden-files: true
+          retention-days: 14
+          if-no-files-found: error
+          path: |
+            .qualification/ci-environment.txt
+            .qualification/ci-first.sha256
+            .qualification/ci-first-report.json
+            .qualification/outputs/report.json
+            .qualification/outputs/wrapping.json
+            .qualification/pdf-investigation-300dpi/
