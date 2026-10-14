@@ -25,7 +25,9 @@ is enforced by the production job dependency, not by a claimed local CI pass.
 
 The read-only [qualification workflow](../../.github/workflows/qualify-swift-resume.yml)
 is ready for publication. It runs on relevant pushes, pull requests, and manual
-dispatches using a fresh Ubuntu 24.04 runner and pinned Swift 6.3.2. It installs
+dispatches using a fresh Ubuntu 24.04 runner and pinned Swift 6.3.2. Swift is
+installed from the official swift.org tarball only after its pinned SHA-256 and
+the Swift 6.x release-signing-key signature are verified. It installs
 Ubuntu build/inspection dependencies normally, without the locally extracted
 packages or existing build products.
 
