@@ -82,7 +82,7 @@ playground.xcworkspace
 # .swiftpm
 
 .build/
-.qualification/
+.build-local/
 __pycache__/
 
 # CocoaPods
