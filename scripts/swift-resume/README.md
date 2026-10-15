@@ -1,4 +1,4 @@
-# Swift Resume Exporter
+# Swift Markdown Resume Exporter
 
 ## Status: production
 

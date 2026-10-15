@@ -1,4 +1,4 @@
-name: Test RESUME exporter
+name: Test RESUME Exporter
 
 on:
   push:
