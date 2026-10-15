@@ -37,16 +37,16 @@ jobs:
         with:
           persist-credentials: false
 
-      - name: Set up resume build
+      - name: Setup Resume Build
         uses: ./.github/actions/setup-resume-build
 
-      - name: Test against frozen reference fixtures
+      - name: Test Fixtures
         run: |
           swift test --package-path scripts/swift-resume \
             --scratch-path .build-local/tests \
             --cache-path .build-local/cache --force-resolved-versions
 
-      - name: Export with two clean release builds
+      - name: Export Release Builds
         run: |
           set -euo pipefail
           for build in first second; do

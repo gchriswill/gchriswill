@@ -31,10 +31,10 @@ jobs:
       - name: Checkout
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
 
-      - name: Set up resume build
+      - name: Setup Resume Build
         uses: ./.github/actions/setup-resume-build
 
-      - name: Test against frozen reference fixtures
+      - name: Test Fixtures
         run: |
           swift test --package-path scripts/swift-resume \
             --scratch-path .build-local/tests \
