@@ -1,0 +1,29 @@
+Preamble	with tab
+<!-- resume:body:start -->
+<!-- resume:source:sha256 b007638352ec2e2a90dfcbf2dc76fbf10851ad7017e604f6eaf87696179b9613 -->
+
+
+Heading one
+
+Paragraph with formatted label (https://example.com/path) and Unicode: café — “Swift”.
+
+Heading two
+
+- item with a long URL https://example.com/xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx (https://example.com/xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx)
+    - nested item
+
+Heading three
+    # not a heading
+    let x = 1
+
+Heading four
+    ## still not a heading
+
+Heading five
+Line with tabs and a long token aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+
+Heading six
+
+Final paragraph.
+<!-- resume:body:end -->
+Suffix without final newline

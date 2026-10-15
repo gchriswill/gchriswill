@@ -42,7 +42,11 @@ public func synchronize(root: URL, fontPath: String = "/usr/share/fonts/truetype
         }
         do {
             let layout = try renderPDF(utf8(printable), destination: temporary, sourceDigest: sourceDigest, fontPath: fontPath)
-            if let layoutDestination { try JSONEncoder().encode(layout).write(to: layoutDestination) }
+            if let layoutDestination {
+                let encoder = JSONEncoder()
+                encoder.outputFormatting = .sortedKeys
+                try encoder.encode(layout).write(to: layoutDestination)
+            }
             try (prefix + marker + bodyData + suffix).write(to: resumeURL)
             // POSIX rename replaces an existing PDF without an intervening delete.
             if rename(temporary.path, root.appendingPathComponent("RESUME.pdf").path) != 0 {

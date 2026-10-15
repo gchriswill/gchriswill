@@ -1,12 +1,12 @@
 import Foundation
-import CryptoSwift
+import Crypto
 
 public struct ResumeError: Error, CustomStringConvertible {
     public let description: String
     public init(_ description: String) { self.description = description }
 }
 
-func digest(_ data: Data) -> String { Array(data).sha256().toHexString() }
+func digest(_ data: Data) -> String { SHA256.hash(data: data).map { String(format: "%02x", $0) }.joined() }
 
 func isWhitespace(_ scalar: Unicode.Scalar) -> Bool {
     switch scalar.value {

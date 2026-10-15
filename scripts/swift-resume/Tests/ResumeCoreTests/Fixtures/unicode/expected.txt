@@ -1,0 +1,8 @@
+Preamble	with tab
+<!-- resume:body:start -->
+<!-- resume:source:sha256 cbacf7bfc49321f7780d5a117ecc5ffc88cd39cd95c75bf66e95cbe89f3307e6 -->
+Unicode
+
+Aliases: - −; combining: á; punctuation: … – ’.
+<!-- resume:body:end -->
+Suffix without final newline

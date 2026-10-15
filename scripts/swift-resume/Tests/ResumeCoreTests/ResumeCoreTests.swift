@@ -41,12 +41,11 @@ final class ResumeCoreTests: XCTestCase {
         XCTAssertThrowsError(try markHeadings("Title\n=====\n", document: &document))
     }
 
-    func testPythonWrappingOracle() throws {
-        guard let path = ProcessInfo.processInfo.environment["RESUME_WRAP_ORACLE"] else {
-            throw XCTSkip("Set RESUME_WRAP_ORACLE to the qualification wrapping fixture")
-        }
+    func testFrozenWrappingOracle() throws {
         struct Case: Decodable { let text: String; let columns: Int; let expected: [String] }
-        let cases = try JSONDecoder().decode([Case].self, from: Data(contentsOf: URL(fileURLWithPath: path)))
+        let cases = try JSONDecoder().decode([Case].self,
+            from: Data(contentsOf: fixtures.appendingPathComponent("wrapping.json")))
+        XCTAssertEqual(cases.count, 1565)
         for item in cases {
             XCTAssertEqual(try wrapLine(item.text, columns: item.columns), item.expected,
                 "columns=\(item.columns), text=\(String(reflecting: item.text))")

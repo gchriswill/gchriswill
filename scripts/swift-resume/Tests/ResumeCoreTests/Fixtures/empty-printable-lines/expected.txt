@@ -1,0 +1,6 @@
+Preamble	with tab
+<!-- resume:body:start -->
+<!-- resume:source:sha256 e67c31f9f5451cb0c5656c50fff7b61b510bc391b260129d8b03c8fef2907f58 -->
+Simple paragraph.
+<!-- resume:body:end -->
+Suffix without final newline

@@ -1,13 +1,22 @@
 {
-  "originHash" : "abc0af29541e79be8aa8ce193316eda773b61b9e42ee708e3779a703414658df",
+  "originHash" : "88352b1fc2e7f742142906fe9bdecee8f0fba69ef92e2d1873a7f9a23cf43e1f",
   "pins" : [
     {
-      "identity" : "cryptoswift",
+      "identity" : "swift-asn1",
       "kind" : "remoteSourceControl",
-      "location" : "https://github.com/krzyzanowskim/CryptoSwift.git",
+      "location" : "https://github.com/apple/swift-asn1.git",
       "state" : {
-        "revision" : "e45a26384239e028ec87fbcc788f513b67e10d8f",
-        "version" : "1.9.0"
+        "revision" : "3b6410f7dee09eb33cdd26260c5fd47fda19b0e2",
+        "version" : "1.7.3"
+      }
+    },
+    {
+      "identity" : "swift-crypto",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/apple/swift-crypto.git",
+      "state" : {
+        "revision" : "1c80d3aff53fedc445b60692980cb4f19a618657",
+        "version" : "5.0.1"
       }
     }
   ],

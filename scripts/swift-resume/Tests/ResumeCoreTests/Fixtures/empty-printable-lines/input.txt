@@ -1,0 +1,5 @@
+Preamble	with tab
+<!-- resume:body:start -->
+old body
+<!-- resume:body:end -->
+Suffix without final newline

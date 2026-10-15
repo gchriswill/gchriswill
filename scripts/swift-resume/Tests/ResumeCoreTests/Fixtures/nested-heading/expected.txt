@@ -1,0 +1,6 @@
+Preamble	with tab
+<!-- resume:body:start -->
+<!-- resume:source:sha256 c8310a2305c7ce20f4755a74ddafe11e6749dd6646b89e1e1fb9abd0fd6b1854 -->
+Nested
+<!-- resume:body:end -->
+Suffix without final newline

@@ -1,0 +1,63 @@
+name: Test RESUME exporter
+
+on:
+  push:
+    branches-ignore:
+      - main
+    paths:
+      - README.md
+      - scripts/swift-resume/**
+      - .github/actions/setup-resume-build/**
+      - .github/workflows/test-resume.yml
+  pull_request:
+    paths:
+      - README.md
+      - scripts/swift-resume/**
+      - .github/actions/setup-resume-build/**
+      - .github/workflows/test-resume.yml
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: test-resume-${{ github.ref }}-${{ github.event_name }}
+  cancel-in-progress: true
+
+jobs:
+  test:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    defaults:
+      run:
+        shell: bash
+    steps:
+      - name: Checkout
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+
+      - name: Set up resume build
+        uses: ./.github/actions/setup-resume-build
+
+      - name: Test against frozen reference fixtures
+        run: |
+          swift test --package-path scripts/swift-resume \
+            --scratch-path .build-local/tests \
+            --cache-path .build-local/cache --force-resolved-versions
+
+      - name: Export with two clean release builds
+        run: |
+          set -euo pipefail
+          for build in first second; do
+            swift build -c release --package-path scripts/swift-resume \
+              --scratch-path ".build-local/release-$build" \
+              --cache-path .build-local/cache --force-resolved-versions
+            work=".build-local/export-$build"
+            mkdir -p "$work"
+            cp README.md RESUME.txt "$work/"
+            ".build-local/release-$build/release/sync-resume" --root "$work"
+            scripts/swift-resume/check-pdf.sh "$work"
+            (cd "$work" && sha256sum RESUME.txt RESUME.pdf) > ".build-local/$build.sha256"
+          done
+          cmp .build-local/first.sha256 .build-local/second.sha256

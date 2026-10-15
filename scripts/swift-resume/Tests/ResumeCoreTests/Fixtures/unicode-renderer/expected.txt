@@ -1,0 +1,8 @@
+Direct Unicode: á Å; aliases: - −; spacing: A B; quotes: “Swift” … – ’.
+<!-- resume:body:start -->
+<!-- resume:source:sha256 fb12279bd31657a3588f5721fda54561436e0d72d7225d00c2dbbcb0e31c81d1 -->
+Unicode renderer
+
+Body.
+<!-- resume:body:end -->
+Suffix without final newline
