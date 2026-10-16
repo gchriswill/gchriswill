@@ -4,21 +4,21 @@
             "type": "swift",
             "request": "launch",
             "args": [],
-            "cwd": "${workspaceFolder:gchriswill}/scripts/swift-resume",
-            "name": "Debug sync-resume (scripts/swift-resume)",
+            "cwd": "${workspaceFolder:gchriswill}/scripts/markdown-resume-exporter",
+            "name": "Debug sync-resume (scripts/markdown-resume-exporter)",
             "target": "sync-resume",
             "configuration": "debug",
-            "preLaunchTask": "swift: Build Debug sync-resume (scripts/swift-resume)"
+            "preLaunchTask": "swift: Build Debug sync-resume (scripts/markdown-resume-exporter)"
         },
         {
             "type": "swift",
             "request": "launch",
             "args": [],
-            "cwd": "${workspaceFolder:gchriswill}/scripts/swift-resume",
-            "name": "Release sync-resume (scripts/swift-resume)",
+            "cwd": "${workspaceFolder:gchriswill}/scripts/markdown-resume-exporter",
+            "name": "Release sync-resume (scripts/markdown-resume-exporter)",
             "target": "sync-resume",
             "configuration": "release",
-            "preLaunchTask": "swift: Build Release sync-resume (scripts/swift-resume)"
+            "preLaunchTask": "swift: Build Release sync-resume (scripts/markdown-resume-exporter)"
         }
     ]
 }

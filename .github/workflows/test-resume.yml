@@ -6,13 +6,13 @@ on:
       - main
     paths:
       - README.md
-      - scripts/swift-resume/**
+      - scripts/markdown-resume-exporter/**
       - .github/actions/setup-resume-build/**
       - .github/workflows/test-resume.yml
   pull_request:
     paths:
       - README.md
-      - scripts/swift-resume/**
+      - scripts/markdown-resume-exporter/**
       - .github/actions/setup-resume-build/**
       - .github/workflows/test-resume.yml
   workflow_dispatch:
@@ -42,7 +42,7 @@ jobs:
 
       - name: Test Fixtures
         run: |
-          swift test --package-path scripts/swift-resume \
+          swift test --package-path scripts/markdown-resume-exporter \
             --scratch-path .build-local/tests \
             --cache-path .build-local/cache --force-resolved-versions
 
@@ -50,14 +50,14 @@ jobs:
         run: |
           set -euo pipefail
           for build in first second; do
-            swift build -c release --package-path scripts/swift-resume \
+            swift build -c release --package-path scripts/markdown-resume-exporter \
               --scratch-path ".build-local/release-$build" \
               --cache-path .build-local/cache --force-resolved-versions
             work=".build-local/export-$build"
             mkdir -p "$work"
             cp README.md RESUME.txt "$work/"
             ".build-local/release-$build/release/sync-resume" --root "$work"
-            scripts/swift-resume/check-pdf.sh "$work"
+            scripts/markdown-resume-exporter/check-pdf.sh "$work"
             (cd "$work" && sha256sum RESUME.txt RESUME.pdf) > ".build-local/$build.sha256"
           done
           cmp .build-local/first.sha256 .build-local/second.sha256

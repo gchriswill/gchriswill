@@ -49,7 +49,7 @@ This repository includes project-specific Copilot context grounded in the resume
 - [Resume and profile skill](.github/skills/resume-profile-maintenance/SKILL.md) helps maintain or tailor professional materials using documented experience.
 - [Technical decision brief skill](.github/skills/technical-decision-brief/SKILL.md) structures architecture assessments around options, trade-offs, risks, and operational impact.
 
-The resume between `resume:start` and `resume:end` is the source of truth. `RESUME.txt` and `RESUME.pdf` are generated outputs; update the README rather than editing those exports directly. The [production workflow](.github/workflows/sync-resume.yml) tests the [Swift exporter](scripts/swift-resume/README.md) in clean Ubuntu CI before publishing its exports. See the exporter instructions for local regeneration and checks.
+The resume between `resume:start` and `resume:end` is the source of truth. `RESUME.txt` and `RESUME.pdf` are generated outputs; update the README rather than editing those exports directly. The [production workflow](.github/workflows/sync-resume.yml) tests the [Swift exporter](scripts/markdown-resume-exporter/README.md) in clean Ubuntu CI before publishing its exports. See the exporter instructions for local regeneration and checks.
 
 <!-- resume:start -->
 

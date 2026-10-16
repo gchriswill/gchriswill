@@ -1,4 +1,7 @@
-# Swift Markdown Resume Exporter
+# Markdown Resume Exporter
+
+`MarkdownResumeExporter` is the Swift package in
+[`scripts/markdown-resume-exporter`](./) that builds the `sync-resume` executable.
 
 ## Status: production
 
@@ -68,7 +71,7 @@ Mono subset. It also checks that the PDF text equals the printable `RESUME.txt`
 text (ignoring whitespace) and that no control markers appear:
 
 ```sh
-scripts/swift-resume/check-pdf.sh "$PWD"
+scripts/markdown-resume-exporter/check-pdf.sh "$PWD"
 ```
 
 ## Requirements
@@ -95,10 +98,10 @@ On Ubuntu, install `pkg-config`, `libcairo2-dev`, `libfreetype-dev`, `pandoc`,
 From the repository root:
 
 ```sh
-swift test --package-path scripts/swift-resume --force-resolved-versions
-swift build -c release --package-path scripts/swift-resume --force-resolved-versions
-scripts/swift-resume/.build/release/sync-resume --root "$PWD"
-scripts/swift-resume/check-pdf.sh "$PWD"
+swift test --package-path scripts/markdown-resume-exporter --force-resolved-versions
+swift build -c release --package-path scripts/markdown-resume-exporter --force-resolved-versions
+scripts/markdown-resume-exporter/.build/release/sync-resume --root "$PWD"
+scripts/markdown-resume-exporter/check-pdf.sh "$PWD"
 ```
 
 Repeating the export must leave the hashes unchanged. Normally, let the

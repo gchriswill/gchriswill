@@ -25,5 +25,5 @@ Use this workflow for career materials based on the repository's resume.
 
 1. Change resume content only between `<!-- resume:start -->` and `<!-- resume:end -->` in README.
 2. Preserve the markers and the existing Markdown structure. Keep Copilot guidance and repository documentation outside the resume markers.
-3. Do not edit [`RESUME.txt`](../../../RESUME.txt) or [`RESUME.pdf`](../../../RESUME.pdf) directly. The [production workflow](../../workflows/sync-resume.yml) tests the Swift exporter and publishes its exports on main. For local regeneration, follow the [Swift exporter instructions](../../../scripts/swift-resume/README.md) and run `scripts/swift-resume/.build/release/sync-resume --root "$PWD"` from the repository root.
+3. Do not edit [`RESUME.txt`](../../../RESUME.txt) or [`RESUME.pdf`](../../../RESUME.pdf) directly. The [production workflow](../../workflows/sync-resume.yml) tests the Swift exporter and publishes its exports on main. For local regeneration, follow the [Swift exporter instructions](../../../scripts/markdown-resume-exporter/README.md) and run `scripts/markdown-resume-exporter/.build/release/sync-resume --root "$PWD"` from the repository root.
 4. Verify the generated text and PDF reflect the change and that the README's source markers remain intact.

@@ -2,7 +2,7 @@
 import PackageDescription
 
 let package = Package(
-    name: "SwiftResume",
+    name: "MarkdownResumeExporter",
     products: [.executable(name: "sync-resume", targets: ["SyncResume"])],
     dependencies: [
         .package(url: "https://github.com/apple/swift-crypto.git", exact: "5.0.1")
