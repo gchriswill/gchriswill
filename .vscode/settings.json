@@ -41,5 +41,10 @@
     },
     "python.analysis.typeCheckingMode": "standard",
     "githubIssues.showIssueNumberInTree": true,
-    "githubPullRequests.experimental.useQuickChat": true
+    "githubPullRequests.experimental.useQuickChat": true,
+    "workbench.colorTheme": "GitHub Dark Default",
+    "workbench.preferredDarkColorTheme": "GitHub Dark Default",
+    "workbench.preferredLightColorTheme": "GitHub Light Default",
+    "markdown-mermaid.lightModeTheme": "base",
+    "markdown-mermaid.darkModeTheme": "base"
 }
