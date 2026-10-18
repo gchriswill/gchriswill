@@ -5,7 +5,7 @@ Contact via GitHub Discussions: https://github.com/gchriswill/gchriswill/discuss
 Swift Across All Platforms and AI Systems Infrastructure
 
 <!-- resume:body:start -->
-<!-- resume:source:sha256 0f9f2a97d3cd44654029887f4cdc56ecbfd41810a46c1aa71b274166381bfe69 -->
+<!-- resume:source:sha256 0c6c7064dc3574e2feda175a427385cafe2e7e913d326608271f044281c4238a -->
 
 
 Summary
