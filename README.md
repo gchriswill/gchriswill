@@ -158,15 +158,15 @@ Provided mobile application development services at Verizon as a consultant unde
 
 ## Earlier Experience
 
-**Mobile Game Developer | The Fastmind · Plantation, FL** | *February 2018 - April 2018*
+**Mobile Game Developer** | **The Fastmind · Plantation, FL** | *February 2018 - April 2018*
 - Contract engagement through Parthenon Studios LLC.
 - Developed game interfaces, interactions, animations, prototypes, and multiplayer backend services using mobile game frameworks and Node.js.
 
-**Mobile Cross-Platform Developer | Teeps · Orlando, FL** | *July 2017 - January 2018*
+**Mobile Cross-Platform Developer** | **Teeps · Orlando, FL** | *July 2017 - January 2018*
 - Contract engagement through Parthenon Studios LLC.
 - Developed Xamarin projects for Android, iOS, and Azure, including REST API integration and multithreaded networking.
 
-**Mobile Developer | Parthenon Studios LLC · Orlando, FL** | *September 2016 - April 2018*
+**Mobile Developer** | **Parthenon Studios LLC · Orlando, FL** | *September 2016 - April 2018*
 - Gathered client business requirements and translated them into technical specifications for software projects.
 - Developed iOS and Android prototypes and backend systems serving APIs with defined payload contracts, progressing concepts into production-ready products, with a focus on customer-centric intuitive user experiences.
 
