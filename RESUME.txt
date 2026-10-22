@@ -2,7 +2,7 @@ Christopher Gonzalez Melendez
 Contact via LinkedIn: https://www.linkedin.com/in/gchriswill/
 Contact via GitHub Discussions: https://github.com/gchriswill/gchriswill/discussions/new?category=message-me
 <!-- resume:body:start -->
-<!-- resume:source:sha256 744d9dec477150f5502c7bac895950c2220c82527a9edc99eb84c3cd56e393c1 -->
+<!-- resume:source:sha256 0dbc49d77a0198ae6d7df0078b9b1b4d62b063ab9a392ba17c39124e4c966d37 -->
 
 
 Summary
@@ -10,8 +10,6 @@ Summary
 Swift-focused software engineer and technical leader with experience across iOS, backend, and cloud-native systems. Served as a Principal Engineer at Verizon, co-led mobile development teams at Disney, and contributed to Apple Services Engineering through a contract engagement.
 
 Hands-on work includes containerized Swift backend services at Apple, an iOS networking stack distributed across the organization as a Swift package, Swift concurrency modernization, augmented-reality experiences for Verizon 5G Home Internet and Disney PhotoPass, and Voicebot features for Verizon's Digital Assistant. Experience also includes technical assessments, mentoring, and cross-functional collaboration.
-
-Current focus: Swift across platforms, AI systems infrastructure and AI-assisted engineering workflows.
 
 
 Experience
