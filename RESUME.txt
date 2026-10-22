@@ -1,9 +1,6 @@
 Christopher Gonzalez Melendez
 Contact via LinkedIn: https://www.linkedin.com/in/gchriswill/
 Contact via GitHub Discussions: https://github.com/gchriswill/gchriswill/discussions/new?category=message-me
-
-Swift Across All Platforms and AI Systems Infrastructure
-
 <!-- resume:body:start -->
 <!-- resume:source:sha256 0c6c7064dc3574e2feda175a427385cafe2e7e913d326608271f044281c4238a -->
 
