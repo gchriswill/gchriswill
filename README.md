@@ -41,14 +41,14 @@ d88E`"888E` <888'888k  888E~?888L   4888>'88"  ''888E` x88:  `)8b.   ╳888  888
 - [Resume PDF for humans](RESUME.pdf?raw=1)
 - [Resume TXT for robots](RESUME.txt?raw=1)
 
-## Repository Resources
+## Resume Resources
 
 - [Career Graph Timeline](TIMELINE.md)
   - Provides a visual representation of career milestones and roles
-- [Chronological Record Stream](STREAM.md)
-  - Provides a chronological record of career events and roles
+- [Chronological Stream Record](STREAM.md)
+  - Provides a chronological record of career related events and roles
 - [Resume Exporter](scripts/markdown-resume-exporter/README.md)
-  - Swift tooling for generating the published resume
+  - Swift tooling for generating the published `pdf` and `txt` versions of this resume
 
 ## Copilot Skills and Knowledge
 
@@ -70,8 +70,6 @@ d88E`"888E` <888'888k  888E~?888L   4888>'88"  ''888E` x88:  `)8b.   ╳888  888
 Swift-focused software engineer and technical leader with experience across iOS, backend, and cloud-native systems. Served as a Principal Engineer at Verizon, co-led mobile development teams at Disney, and contributed to Apple Services Engineering through a contract engagement.
 
 Hands-on work includes containerized Swift backend services at Apple, an iOS networking stack distributed across the organization as a Swift package, Swift concurrency modernization, augmented-reality experiences for Verizon 5G Home Internet and Disney PhotoPass, and Voicebot features for Verizon's Digital Assistant. Experience also includes technical assessments, mentoring, and cross-functional collaboration.
-
-Current focus: Swift across platforms, AI systems infrastructure and AI-assisted engineering workflows.
 
 
 ## Experience
