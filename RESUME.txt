@@ -2,7 +2,7 @@ Christopher Gonzalez Melendez
 Contact via LinkedIn: https://www.linkedin.com/in/gchriswill/
 Contact via GitHub Discussions: https://github.com/gchriswill/gchriswill/discussions/new?category=message-me
 <!-- resume:body:start -->
-<!-- resume:source:sha256 7003f1125a2d6eb3d499b30040511f0a184367d19910ed893c82c43dafef84bb -->
+<!-- resume:source:sha256 744d9dec477150f5502c7bac895950c2220c82527a9edc99eb84c3cd56e393c1 -->
 
 
 Summary
@@ -17,7 +17,6 @@ Current focus: Swift across platforms, AI systems infrastructure and AI-assisted
 Experience
 
 Software Engineer — Apple Services Engineering
-
 Apple · Orlando, FL — August 2026 – October 2026
 
 Contracted through Bayside Solutions and assigned to the Apple Services Engineering group. Contributed to the design, development, integration, and operational excellence of cloud-native services, primarily in Swift, within containerized infrastructure.
@@ -32,7 +31,6 @@ Contracted through Bayside Solutions and assigned to the Apple Services Engineer
 Technologies and tools: Swift, Vapor, Kubernetes, Docker, React, Node.js, Python, PostgreSQL, MongoDB, Bash, Git, VS Code, Claude, Claude Code, Claude Skills, Claude Coder Subagents, OpenAI API, CI/CD pipelines, cloud services, distributed systems, service-oriented architectures, and agentic workflow automation.
 
 Principal Engineer — Application Development
-
 Verizon · Irving, TX — July 2023 – December 2025
 
 As a Principal Engineer on the 5G Home Internet and Services team, focused on team leadership and orchestration, software development subject-matter expertise, complex programming tasks, technical innovation, and maintenance initiative management.
@@ -52,7 +50,6 @@ As a Principal Engineer on the 5G Home Internet and Services team, focused on te
 Technologies and tools: Java, Swift, SwiftUI, Combine, Swift Concurrency (async/await and continuations), AR, Spring, iOS development, machine learning, Python, Kibana (Elasticsearch), TensorFlow, PyTorch, computer vision, Vision, Core ML, Create ML, AWS, GCP, Xcode, xScope, Bash, Terminal, Git, GitLab, Confluence, JIRA, G Suite, Postman, Charles, Figma, and Jenkins.
 
 Senior Software Engineer — iOS Development
-
 Disney · Celebration, FL — November 2021 – July 2023
 
 As a Senior Software Engineer on the PhotoPass team within the My Disney Experience app, contributed to the technical direction and vision for PhotoPass in-app products and collaborated across multiple engineering teams.
@@ -66,7 +63,6 @@ As a Senior Software Engineer on the PhotoPass team within the My Disney Experie
 Technologies and tools: Xcode, Swift, Objective-C, agile software development, machine learning, augmented reality, Apple Pay, UIKit, GCD, PassKit, Jira, GitLab, and Git.
 
 Senior Engineer — Software and Systems Engineering
-
 Verizon · Irving, TX — December 2020 – November 2021
 
 Member of the Emerging Technologies team, working as a Senior Engineer/Developer for Verizon’s Conversational Cloud Services in GCP and Chat Backend Services.
@@ -76,7 +72,6 @@ Member of the Emerging Technologies team, working as a Senior Engineer/Developer
 Technologies and tools: IntelliJ IDEA, Java, Maven, Tomcat, AWS, PostgreSQL, Node.js, Vapor (server-side Swift), Bash, Dialogflow, Splunk, Kibana (Elasticsearch), Terminal, Git, GitLab Self-Hosted, Confluence, JIRA, G Suite, Postman, WebStorm, Google Cloud Platform, and Jenkins.
 
 Engineer 4 — Software and Systems Engineering
-
 Verizon · Irving, TX — October 2018 – December 2020
 
 - Contributed to development and maintenance of backend-connected mobile systems for Verizon’s Digital Assistant features (live chat, chatbot, and voicebot) within the My Verizon iOS app’s core engineering team.
@@ -86,7 +81,6 @@ Verizon · Irving, TX — October 2018 – December 2020
 Technologies and tools: Xcode, Swift, Objective-C, Node.js, Vapor (server-side Swift), Fluent, Bash, Terminal, Git, PostgreSQL, Bitbucket Server, Confluence, JIRA, G Suite, WebStorm, and Jenkins.
 
 Engineer 3 — Software and Systems Engineering
-
 Verizon · Irving, TX — April 2018 – October 2018
 
 Provided mobile application development services at Verizon as a consultant under contract through The Select Group, a technical-services firm.
@@ -117,15 +111,12 @@ Mobile Developer | Parthenon Studios LLC · Orlando, FL | September 2016 - April
 Education
 
 Software Development — Master of Science
-
 Boston University, Metropolitan College · Boston, MA — May 2020 – May 2023
 
 Software Engineering — Graduate Certification
-
 Boston University, Metropolitan College · Boston, MA — May 2020 – May 2023
 
 Mobile Development — Bachelor of Science
-
 Full Sail University · Winter Park, FL — September 2013 – November 2016
 
 
