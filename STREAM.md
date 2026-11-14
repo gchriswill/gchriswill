@@ -130,5 +130,5 @@
 2026-10 → Completed Software Engineer, Apple Services Engineering
 2026-10 → Started GitHub Foundations course, Microsoft Learn
 2026-10 → Completed GitHub Foundations course, Microsoft Learn
-2026-10 → Earned GitHub Foundations Certification, Microsoft Learn
+2026-10 → Earned GitHub Foundations Certification, Pearson + Microsoft
 ```
