@@ -44,6 +44,10 @@ d88E`"888E` <888'888k  888E~?888L   4888>'88"  ''888E` x88:  `)8b.   ╳888  888
 
 ## Resume Resources
 
+- [Resume Source](RESUME.md)
+  - Canonical Markdown source used to generate the published PDF and plain-text resumes
+- [Career and Technical Progression](PROGRESSION.md)
+  - High-level overview of career stages, technical domains, and evolving areas of focus
 - [Career Graph Timeline](TIMELINE.md)
   - Provides a visual representation of career milestones and roles
 - [Chronological Stream Record](STREAM.md)
