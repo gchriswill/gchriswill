@@ -5,7 +5,7 @@ description: "Use when evaluating software architecture, distributed or cloud se
 
 # Technical Decision Brief
 
-Create evidence-based engineering assessments and proposals, using the repository resume as background about the author's documented experience when relevant. Do not treat a listed technology as a requirement or assume the resume describes the current project's implementation.
+Create evidence-based engineering assessments and proposals, using [`RESUME.md`](../../../RESUME.md) as background about the author's documented experience when relevant. Do not treat a listed technology as a requirement or assume the resume describes the current project's implementation.
 
 ## Procedure
 

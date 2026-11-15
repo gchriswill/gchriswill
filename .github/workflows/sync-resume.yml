@@ -5,7 +5,7 @@ on:
     branches:
       - main
     paths:
-      - README.md
+      - RESUME.md
       - scripts/markdown-resume-exporter/**
       - .github/actions/setup-resume-build/**
       - .github/workflows/sync-resume.yml
@@ -63,5 +63,5 @@ jobs:
           git config user.email \
             "41898282+github-actions[bot]@users.noreply.github.com"
 
-          git commit -m "chore: regenerate resume from README"
+          git commit -m "chore: regenerate resume from RESUME.md"
           git push origin HEAD:main

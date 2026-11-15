@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
-# Check an exported RESUME.pdf against its README and RESUME.txt using poppler-utils.
-# Usage: check-pdf.sh <directory containing README.md, RESUME.txt and RESUME.pdf>
+# Check an exported RESUME.pdf against RESUME.md and RESUME.txt using poppler-utils.
+# Usage: check-pdf.sh <directory containing RESUME.md, RESUME.txt and RESUME.pdf>
 set -euo pipefail
 
 root=${1:?usage: check-pdf.sh <directory>}
@@ -9,9 +9,9 @@ fail() { echo "check-pdf: $*" >&2; exit 1; }
 
 info=$(pdfinfo "$pdf")
 field() { sed -n "s/^$1:[[:space:]]*//p" <<<"$info"; }
-digest=$(sha256sum "$root/README.md" | cut -d' ' -f1)
+digest=$(sha256sum "$root/RESUME.md" | cut -d' ' -f1)
 [[ $(field Title) == "Resume" ]] || fail "unexpected Title: $(field Title)"
-[[ $(field Subject) == "README SHA-256: $digest" ]] || fail "Subject does not match README digest"
+[[ $(field Subject) == "RESUME.md SHA-256: $digest" ]] || fail "Subject does not match RESUME.md digest"
 [[ $(field 'Page size') == "612 x 792 pts (letter)" ]] || fail "unexpected page size: $(field 'Page size')"
 (( $(field Pages) >= 1 )) || fail "PDF has no pages"
 

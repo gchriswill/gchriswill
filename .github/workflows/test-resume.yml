@@ -5,13 +5,13 @@ on:
     branches-ignore:
       - main
     paths:
-      - README.md
+      - RESUME.md
       - scripts/markdown-resume-exporter/**
       - .github/actions/setup-resume-build/**
       - .github/workflows/test-resume.yml
   pull_request:
     paths:
-      - README.md
+      - RESUME.md
       - scripts/markdown-resume-exporter/**
       - .github/actions/setup-resume-build/**
       - .github/workflows/test-resume.yml
@@ -55,7 +55,7 @@ jobs:
               --cache-path .build-local/cache --force-resolved-versions
             work=".build-local/export-$build"
             mkdir -p "$work"
-            cp README.md RESUME.txt "$work/"
+            cp RESUME.md RESUME.txt "$work/"
             ".build-local/release-$build/release/sync-resume" --root "$work"
             scripts/markdown-resume-exporter/check-pdf.sh "$work"
             (cd "$work" && sha256sum RESUME.txt RESUME.pdf) > ".build-local/$build.sha256"

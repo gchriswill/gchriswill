@@ -2,12 +2,12 @@ import Foundation
 
 public func synchronize(root: URL, fontPath: String = "/usr/share/fonts/truetype/dejavu/DejaVuSansMono.ttf",
                         layoutDestination: URL? = nil) throws {
-    let readme = try Data(contentsOf: root.appendingPathComponent("README.md"))
-    let sourceDigest = digest(readme)
-    let readmeLines = byteLines(readme)
-    let (first, last) = try markedSection(readmeLines, start: "<!-- resume:start -->", end: "<!-- resume:end -->")
-    let markdown = try utf8(readmeLines[(first + 1)..<last].reduce(Data(), +))
-    guard !stripped(markdown).isEmpty else { throw ResumeError("The README resume section is empty.") }
+    let resumeSource = try Data(contentsOf: root.appendingPathComponent("RESUME.md"))
+    let sourceDigest = digest(resumeSource)
+    let sourceLines = byteLines(resumeSource)
+    let (first, last) = try markedSection(sourceLines, start: "<!-- resume:start -->", end: "<!-- resume:end -->")
+    let markdown = try utf8(sourceLines[(first + 1)..<last].reduce(Data(), +))
+    guard !stripped(markdown).isEmpty else { throw ResumeError("The RESUME.md section is empty.") }
     let pandoc = try Pandoc(root: root)
     do {
         let parsed = try pandoc.run(["--from=gfm", "--to=json"], input: Data(markdown.utf8))

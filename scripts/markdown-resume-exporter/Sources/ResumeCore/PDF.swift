@@ -89,7 +89,7 @@ public func renderPDF(_ text: String, destination: URL, sourceDigest: String,
     defer { cairo_surface_destroy(surface) }
     try check(cairo_surface_status(surface), "Create PDF surface")
     cairo_pdf_surface_set_metadata(surface, CAIRO_PDF_METADATA_TITLE, "Resume")
-    cairo_pdf_surface_set_metadata(surface, CAIRO_PDF_METADATA_SUBJECT, "README SHA-256: \(sourceDigest)")
+    cairo_pdf_surface_set_metadata(surface, CAIRO_PDF_METADATA_SUBJECT, "RESUME.md SHA-256: \(sourceDigest)")
     cairo_pdf_surface_set_metadata(surface, CAIRO_PDF_METADATA_CREATE_DATE, "2000-01-01T00:00:00Z")
     cairo_pdf_surface_set_metadata(surface, CAIRO_PDF_METADATA_MOD_DATE, "2000-01-01T00:00:00Z")
     guard let context = cairo_create(surface) else {

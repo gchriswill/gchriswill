@@ -1,6 +1,6 @@
 ---
 name: resume-profile-maintenance
-description: "Use when maintaining or tailoring this repository's resume, professional bio, portfolio, cover letter, LinkedIn summary, interview narrative, or career timeline and Mermaid GitGraph. Ground professional claims in the documented README resume and detailed chronology in TIMELINE.md."
+description: "Use when maintaining or tailoring this repository's resume, professional bio, portfolio, cover letter, LinkedIn summary, interview narrative, or career timeline and Mermaid GitGraph. Ground professional claims in RESUME.md and detailed chronology in TIMELINE.md."
 ---
 
 # Resume and Profile Maintenance
@@ -9,7 +9,7 @@ Use this workflow for career materials based on the repository's resume.
 
 ## Sources and accuracy
 
-1. Read the relevant sections of [`README.md`](../../../README.md), which is the canonical source of professional history.
+1. Read the relevant sections of [`RESUME.md`](../../../RESUME.md), which is the canonical source of professional history.
 2. Consult [`TIMELINE.md`](../../../TIMELINE.md) or [`PROGRESSION.md`](../../../PROGRESSION.md) only when chronology or career progression is relevant.
 3. Preserve the distinction between completed work, current focus, and stated aspirations. Do not invent dates, titles, responsibilities, tools, metrics, or outcomes.
 4. If a requested claim cannot be supported by these sources, leave it out or identify what needs confirmation.
@@ -23,10 +23,10 @@ Use this workflow for career materials based on the repository's resume.
 
 ## Updating this repository
 
-1. Change resume content only between `<!-- resume:start -->` and `<!-- resume:end -->` in README.
-2. Preserve the markers and the existing Markdown structure. Keep Copilot guidance and repository documentation outside the resume markers.
+1. Change resume content only between `<!-- resume:start -->` and `<!-- resume:end -->` in RESUME.md.
+2. Preserve the markers and the existing Markdown structure. Keep the profile README, Copilot guidance, and repository documentation outside the resume source.
 3. Do not edit [`RESUME.txt`](../../../RESUME.txt) or [`RESUME.pdf`](../../../RESUME.pdf) directly. The [production workflow](../../workflows/sync-resume.yml) tests the Swift exporter and publishes its exports on main. For local regeneration, follow the [Swift exporter instructions](../../../scripts/markdown-resume-exporter/README.md) and run `scripts/markdown-resume-exporter/.build/release/sync-resume --root "$PWD"` from the repository root.
-4. Verify the generated text and PDF reflect the change and that the README's source markers remain intact.
+4. Verify the generated text and PDF reflect the change and that RESUME.md's source markers remain intact.
 
 ## Maintaining the career timeline
 

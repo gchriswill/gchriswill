@@ -39,8 +39,11 @@ final class ExportTests: XCTestCase {
             "temporary files remain: \(names)", file: file, line: line)
     }
 
-    private func prepare(readme: Data, resume: Data = template) throws {
-        try readme.write(to: file("README.md"))
+    private func prepare(source: Data, resume: Data = template, readme: Data? = nil) throws {
+        try source.write(to: file("RESUME.md"))
+        if let readme {
+            try readme.write(to: file("README.md"))
+        }
         try resume.write(to: file("RESUME.txt"))
         try Data("existing-pdf".utf8).write(to: file("RESUME.pdf"))
     }
@@ -63,11 +66,12 @@ final class ExportTests: XCTestCase {
             for item in try FileManager.default.contentsOfDirectory(atPath: directory.path) {
                 try FileManager.default.removeItem(at: file(item))
             }
-            try FileManager.default.copyItem(at: source.appendingPathComponent("README.md"), to: file("README.md"))
+            try FileManager.default.copyItem(at: source.appendingPathComponent("README.md"), to: file("RESUME.md"))
             try FileManager.default.copyItem(at: source.appendingPathComponent("input.txt"), to: file("RESUME.txt"))
             let layoutURL = file("layout.json")
             try synchronize(root: directory, layoutDestination: layoutURL)
 
+            XCTAssertFalse(FileManager.default.fileExists(atPath: file("README.md").path))
             XCTAssertEqual(try Data(contentsOf: file("RESUME.txt")),
                 try Data(contentsOf: source.appendingPathComponent("expected.txt")), "\(name): text bytes differ")
             let expected = try JSONDecoder().decode(Layout.self,
@@ -98,8 +102,8 @@ final class ExportTests: XCTestCase {
             ("missing-glyph", Data("<!-- resume:start -->\n# Test\n\n\u{1F680}\n<!-- resume:end -->\n".utf8)),
             ("empty-conversion", Data("<!-- resume:start -->\n<!-- hidden -->\n<!-- resume:end -->\n".utf8)),
         ]
-        for (name, readme) in invalid {
-            try prepare(readme: readme)
+        for (name, source) in invalid {
+            try prepare(source: source)
             try assertSafeFailure(name)
         }
         let templateText = String(decoding: template, as: UTF8.self)
@@ -112,11 +116,15 @@ final class ExportTests: XCTestCase {
             ("invalid-printable-utf8", Data([0xff]) + template.dropFirst("Preamble".utf8.count)),
         ]
         for (name, resume) in invalidTemplates {
-            try prepare(readme: Data(marked.utf8), resume: resume)
+            try prepare(source: Data(marked.utf8), resume: resume)
             try assertSafeFailure(name)
         }
-        try prepare(readme: Data(marked.utf8))
+        try prepare(source: Data(marked.utf8))
         try assertSafeFailure("missing-font", font: file("missing.ttf").path)
+
+        try prepare(source: Data(marked.utf8), readme: Data(marked.utf8))
+        try FileManager.default.removeItem(at: file("RESUME.md"))
+        try assertSafeFailure("missing-resume-source")
     }
 
     func testPandocFailuresLeaveOutputsUnchanged() throws {
@@ -126,7 +134,7 @@ final class ExportTests: XCTestCase {
         let originalPath = ProcessInfo.processInfo.environment["PATH"] ?? "/usr/bin:/bin"
         defer { setenv("PATH", originalPath, 1) }
 
-        try prepare(readme: marked)
+        try prepare(source: marked)
         setenv("PATH", tools.path, 1)
         try assertSafeFailure("missing-pandoc")
 
@@ -149,7 +157,7 @@ final class ExportTests: XCTestCase {
         let marked = try Data(contentsOf: fixtures.appendingPathComponent("lf/README.md"))
         let staging = file("RESUME.pdf.tmp")
 
-        try prepare(readme: marked)
+        try prepare(source: marked)
         try FileManager.default.createDirectory(at: staging, withIntermediateDirectories: false)
         XCTAssertThrowsError(try synchronize(root: directory))
         XCTAssertEqual(try Data(contentsOf: file("RESUME.txt")), template)
@@ -172,5 +180,27 @@ final class ExportTests: XCTestCase {
         XCTAssertThrowsError(try synchronize(root: directory))
         XCTAssertNotEqual(try Data(contentsOf: file("RESUME.txt")), template)
         try assertNoScratch()
+    }
+
+    func testResumeSourceControlsDigestAndIgnoresProfileReadme() throws {
+        let source = try Data(contentsOf: fixtures.appendingPathComponent("lf/README.md"))
+        try prepare(source: source, readme: Data("Profile README version one\n".utf8))
+        try synchronize(root: directory)
+        let first = try outputs()
+        let sourceDigest = digest(source)
+        XCTAssertTrue(String(decoding: first[0], as: UTF8.self)
+            .contains("<!-- resume:source:sha256 \(sourceDigest) -->"))
+
+        try Data("Profile README version two\n".utf8).write(to: file("README.md"))
+        try synchronize(root: directory)
+        XCTAssertEqual(try outputs(), first, "profile README changes must not affect exports")
+
+        let changedSource = source + Data("\n".utf8)
+        try changedSource.write(to: file("RESUME.md"))
+        try synchronize(root: directory)
+        let changed = try outputs()
+        XCTAssertNotEqual(changed, first, "resume source changes must affect exports")
+        XCTAssertTrue(String(decoding: changed[0], as: UTF8.self)
+            .contains("<!-- resume:source:sha256 \(digest(changedSource)) -->"))
     }
 }

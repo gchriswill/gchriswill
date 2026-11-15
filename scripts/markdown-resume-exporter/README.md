@@ -6,8 +6,8 @@
 ## Status: production
 
 `sync-resume` generates [`RESUME.txt`](../../RESUME.txt) and
-[`RESUME.pdf`](../../RESUME.pdf) from the resume section of
-[`README.md`](../../README.md). It retains Pandoc, uses Apple's pinned
+[`RESUME.pdf`](../../RESUME.pdf) from the marked resume section of
+[`RESUME.md`](../../RESUME.md). It retains Pandoc, uses Apple's pinned
 [swift-crypto](https://github.com/apple/swift-crypto) for SHA-256 (CryptoKit's
 API, backed by bundled BoringSSL on Linux), and imports Cairo/FreeType
 directly through SwiftPM system-library modules. There is no browser engine, custom PDF writer, or
@@ -34,8 +34,8 @@ its pinned SHA-256 and release-signing-key signature are verified.
 - [**Test RESUME exporter**](../../.github/workflows/test-resume.yml) runs
   read-only on pull requests, non-`main` pushes, and manual dispatch. It runs
   the Swift tests against the frozen reference fixtures, then compiles two
-  independent clean release builds. Each exports a disposable copy of the
-  README and text template, [`check-pdf.sh`](check-pdf.sh) validates each PDF,
+  independent clean release builds. Each exports a disposable copy of
+  `RESUME.md` and the text template. [`check-pdf.sh`](check-pdf.sh) validates each PDF,
   and the text/PDF hashes must match across builds.
 - [**Sync RESUME**](../../.github/workflows/sync-resume.yml) runs on `main`
   pushes and manual dispatch. It runs the Swift tests, builds once, exports into
@@ -54,10 +54,11 @@ final output of the retired Python generator:
   lines, nested headings). Each has a `README.md`, an input text template, the
   expected `RESUME.txt` bytes, and the expected line/page/baseline layout plan.
 
-The fixtures are marked `-text` in [`.gitattributes`](../../.gitattributes) so
-CRLF content is not normalized. Do not regenerate them from the Swift exporter;
-change them only when the output contract intentionally changes, and review the
-difference.
+The Markdown fixture files retain their historical `README.md` names; tests
+copy them as `RESUME.md` into disposable export directories. Fixtures are
+marked `-text` in [`.gitattributes`](../../.gitattributes) so CRLF content is
+not normalized. Do not regenerate them from the Swift exporter; change them
+only when the output contract intentionally changes, and review the difference.
 
 The Swift tests also cover deterministic regeneration, scratch cleanup, invalid
 source/template markers, invalid UTF-8, missing fonts, and Pandoc that is missing,
@@ -66,9 +67,9 @@ directory and symlink failures, unwritable text, and text-first PDF replacement
 failure. In every failure case the existing outputs must be unchanged.
 
 [`check-pdf.sh`](check-pdf.sh) uses Poppler to require the `Resume` title, the
-exact README digest subject, Letter pages, and an embedded Unicode DejaVu Sans
-Mono subset. It also checks that the PDF text equals the printable `RESUME.txt`
-text (ignoring whitespace) and that no control markers appear:
+exact `RESUME.md` digest subject, Letter pages, and an embedded Unicode DejaVu
+Sans Mono subset. It also checks that the PDF text equals the printable
+`RESUME.txt` text (ignoring whitespace) and that no control markers appear:
 
 ```sh
 scripts/markdown-resume-exporter/check-pdf.sh "$PWD"
@@ -132,7 +133,8 @@ to the Swift command. This does not modify Git configuration.
 
 ## Implemented contract
 
-- Hash the entire README's exact bytes, including content outside the resume.
+- Hash the entire `RESUME.md` file's exact bytes, including content outside the
+  resume markers.
 - Select one ordered pair of complete-line source/body markers; validate
   selected UTF-8 and reject empty source/conversion output.
 - Preserve links recursively through a heterogeneous Codable Pandoc AST.

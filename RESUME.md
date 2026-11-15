@@ -1,4 +1,4 @@
-<!-- The resume between `resume:start` and `resume:end` is the source of truth. `RESUME.txt` and `RESUME.pdf` are generated outputs; update the README rather than editing those exports directly. The [production workflow](.github/workflows/sync-resume.yml) tests the [Swift exporter](scripts/markdown-resume-exporter/README.md) in clean Ubuntu CI before publishing its exports. See the exporter instructions for local regeneration and checks. -->
+<!-- The resume between `resume:start` and `resume:end` is the source of truth. `RESUME.txt` and `RESUME.pdf` are generated outputs; update this file rather than editing those exports directly. The [production workflow](.github/workflows/sync-resume.yml) tests the [Swift exporter](scripts/markdown-resume-exporter/README.md) in clean Ubuntu CI before publishing its exports. See the exporter instructions for local regeneration and checks. -->
 
 <!-- resume:start -->
 
