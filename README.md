@@ -1,5 +1,3 @@
-### [www](https://www.gchriswill.me)
-
 ```text
                                                   .       .x┼=:.                         .          ..       .. 
                         .uef^"                   @88>    z`    ^%    x=~                @88>  x .d88"  x .d88"  
@@ -19,6 +17,11 @@ d88E`"888E` <888'888k  888E~?888L   4888>'88"  ''888E` x88:  `)8b.   ╳888  888
 ```
 
 ### [.me](https://www.gchriswill.me)
+### [.us](https://gchriswill.us)
+### [.dev](https://gchriswill.dev)
+### [.com](https://gchriswill.com)
+
+---  
 
 **D.K.A.** *(Digitally known as)***:** *`gchriswill`*
 
@@ -26,8 +29,6 @@ d88E`"888E` <888'888k  888E~?888L   4888>'88"  ''888E` x88:  `)8b.   ╳888  888
 - *Swift Across All Platforms*
 - *AI Systems Infrastructure*
 - *AI Assisted Engineering Workflows*
-
----  
 
 ## Contact
 
